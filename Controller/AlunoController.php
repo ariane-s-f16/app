@@ -50,6 +50,9 @@ final class AlunoController extends Controller
         parent::render('aluno/form_aluno.php', $model);
     }
     public static function delete() : void
+    {
+        
+    }
 }
 
 ?>
