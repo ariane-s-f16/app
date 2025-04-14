@@ -51,7 +51,14 @@ final class AlunoController extends Controller
     }
     public static function delete() : void
     {
-        
+        parent::isProtected();
+        $model = new Aluno();
+
+        try
+        {
+            $model-> delete((int)$_GET['id']);
+            parent::redirect("/aluno");
+        }
     }
 }
 
