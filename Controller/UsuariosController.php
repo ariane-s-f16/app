@@ -2,10 +2,10 @@
 
 namespace APP\Controller;
 
-use App\Model\Autor;
+use App\Model\Usuario;
 use Exception;
 
-    final class AutorConttroller extends Controller
+    final class UsuarioConttroller extends Controller
     {
         public static function index() : void
         {
