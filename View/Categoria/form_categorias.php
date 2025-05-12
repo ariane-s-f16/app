@@ -13,26 +13,19 @@
     <div>
         <?php include VIEWS . '/Includes/menu.php' ?>
 
-        <h1>Cadastro de Autores</h1>
+        <h1>Cadastro de Aluno</h1>
 
-        <?= $model_autor->getErrors() ?>
+        <?= $model_categorias->getErrors() ?>
 
-        <form method="post" action="/Autor/Cadastro" class="p-5">
+        <form method="post" action="/aluno/cadastro" class="p-5">
             
-            <input name="id" type="hidden" value="<?= $model_autor->Id ?>" /> 
+            <input name="id" type="hidden" value="<?= $model_categorias->Id ?>" /> 
            
             <div class="mb-3">
                 <label for="nome" class="form-label">NOME:</label>
-                <input type="text" value="<?= $model_autor->nome ?>" class="form-control" name="nome" id="nome">
+                <input type="text" value="<?= $model_categorias->nome ?>" class="form-control" name="nome" id="nome">
             </div>
-            <div class="mb-3">
-                <label for="data_nascimento" class="form-label">DATA DE NASCIMENTO:</label>
-                <input type="text" value="<?= $model_autor->data_nascimento ?>"  class="form-control" name="data_nascimento" id="data_nascimento">
-            </div>
-            <div class="mb-3">
-                <label for="CPF" class="form-label">CPF:</label>
-                <input type="text" value="<?= $model_autor->CPF ?>"  class="form-control" name="CPF" id="CPF">
-            </div>            
+           
             <button type="submit" class="btn btn-success">Salvar</button>
 
         </form>

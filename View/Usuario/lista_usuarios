@@ -13,28 +13,30 @@
     <div>
         <?php include VIEWS . '/Includes/menu.php' ?>
 
-        <h1>Lista de Autores</h1>
+        <h1>Lista de usuarios</h1>
 
-        <a href="/aluno/cadastro">Novo Autor</a>
+        <a href="/Usuario/cadastro">Novo Usuarios</a>
 
-        <?= $model_autor->getErrors() ?>
+        <?= $model_categorias->getErrors() ?>
 
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Data de Nascimento</th>
-                    <th scope="col">CPF</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Senha</th>
+                    
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($model_autor->rows as $autor): ?>
+                <?php foreach($model_usuario->rows as $usario): ?>
                 <tr>
-                    <td> <?= $autor->Id ?> </td>
-                    <td> <a href="/Autor/Cadastro?id=<?= $autor->Id ?>"><?= $autor->nome ?></a> </td>
-                    <td> <?= $autor->data_nascimento ?> </td>
-                    <td> <a href="/Autor/Delete?id=<?= $autor->Id ?>">Remover</a> </td>
+                    <td> <?= $usuario->Id ?> </td>
+                    <td> <a href="/Usuario/Cadastro?id=<?= $usuario->Id ?>"><?= $usuario->nome ?></a> </td>
+                    <td> <a href="/Usuario/Cadastro?id=<?= $usuario->Id ?>"><?= $usuario->email ?></a> </td>
+                    <td> <a href="/Usuario/Cadastro?id=<?= $usuario->Id ?>"><?= $usuario->senha ?></a> </td>
+                    <td> <a href="/Usuario/Delete?id=<?= $usuario->Id ?>">Remover</a> </td>
                 </tr>
                 <?php endforeach ?>
             </tbody>

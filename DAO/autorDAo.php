@@ -28,7 +28,7 @@ final class AutorDAO extends DAO{
 
         return $model_autor;
     }
-    public function update(Autor $model) : Autor{
+    public function update(Autor $model_autor) : Autor{
         $sql = "UPDATE autor SET nome=?, data_nascimento=?, CPF=? WHERE id=? ";
         $stmt = parent::$conexao->prepare($sql);
 
@@ -43,7 +43,7 @@ final class AutorDAO extends DAO{
     }
 
     public function selectById(int $id) : ?Autor{
-        $sql = "SELECT * FROM aluno WHERE id=? ";
+        $sql = "SELECT * FROM autor WHERE id=? ";
         
         
         $stmt = parent::$conexao->prepare($sql);

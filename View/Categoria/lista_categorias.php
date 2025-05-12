@@ -13,28 +13,26 @@
     <div>
         <?php include VIEWS . '/Includes/menu.php' ?>
 
-        <h1>Lista de Autores</h1>
+        <h1>Lista de Categorias</h1>
 
-        <a href="/aluno/cadastro">Novo Autor</a>
+        <a href="/aluno/cadastro">Nova Categoria</a>
 
-        <?= $model_autor->getErrors() ?>
+        <?= $model_categorias->getErrors() ?>
 
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Data de Nascimento</th>
-                    <th scope="col">CPF</th>
+                    
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($model_autor->rows as $autor): ?>
+                <?php foreach($model_categorias->rows as $categoria): ?>
                 <tr>
-                    <td> <?= $autor->Id ?> </td>
-                    <td> <a href="/Autor/Cadastro?id=<?= $autor->Id ?>"><?= $autor->nome ?></a> </td>
-                    <td> <?= $autor->data_nascimento ?> </td>
-                    <td> <a href="/Autor/Delete?id=<?= $autor->Id ?>">Remover</a> </td>
+                    <td> <?= $categoria->Id ?> </td>
+                    <td> <a href="/Categoria/Cadastro?id=<?= $categoria->Id ?>"><?= $categoria->nome ?></a> </td>
+                    <td> <a href="/Categoria/Delete?id=<?= $categoria->Id ?>">Remover</a> </td>
                 </tr>
                 <?php endforeach ?>
             </tbody>

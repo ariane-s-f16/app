@@ -28,7 +28,7 @@ final class Usuario extends Model{
         } get => $this->$email ?? null;
     }
     
-    public ?string $CPF {
+    public ?string $senha {
         set{
             if(strlen($value) < 3)
                 throw new Exception("senha deve ter no minimo 4 caracteres");
