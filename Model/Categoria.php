@@ -21,7 +21,7 @@ final class Categoria extends Model{
    
 
     function save() : Categoria{
-        return new CAtegoriaDAO()->save($this);
+        return new CategoriaDAO()->save($this);
     }
 
     function getById(int $id) : ?Categoria{
